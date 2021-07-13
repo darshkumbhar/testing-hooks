@@ -22,7 +22,7 @@
     }
   },
   "lint-staged": {
-    "*.{js,json,jsx}": "eslint --cache --fix"
+    "*.js": "eslint --cache --fix"
   },
   "dependencies": {
     "react": "^17.0.2"
