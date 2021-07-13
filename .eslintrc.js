@@ -6,9 +6,11 @@ module.exports ={
 			jsx: true,
 		},
 	},
-    "extends" :[
-        "eslint:recommended"
-    ]
+   plugins: ['react'],
+	extends: ['eslint:recommended', 'plugin:react/recommended'],
+	rules: {
+		semi: ['error', 'never']
+	},
        
     
 }

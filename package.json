@@ -4,19 +4,27 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint ."
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": “echo \”[Husky
-      ] pre-commit\””
-    }
+    "lint": "eslint .",
+    "fix": "eslint . --fix"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "eslint": "^7.30.0",
-    "eslint-plugin-react": "^7.24.0"
+    "eslint-plugin-react": "^7.24.0",
+    "husky": "^7.0.1",
+    "lint-staged": "^11.0.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,jsx}": "eslint --cache --fix"
+  },
+  "dependencies": {
+    "react": "^17.0.2"
   }
 }
